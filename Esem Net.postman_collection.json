@@ -1,0 +1,633 @@
+{
+	"info": {
+		"_postman_id": "7904d134-6500-4965-8532-d8275d585d20",
+		"name": "Esem Net",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authenctication",
+			"item": [
+				{
+					"name": "Login",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "Budi",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "Sandi123",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}auth/login",
+							"host": [
+								"{{url}}auth"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}auth/logout?token=",
+							"host": [
+								"{{url}}auth"
+							],
+							"path": [
+								"logout"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Paket Master Data",
+			"item": [
+				{
+					"name": "Gett All Paket Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}paket?token=5894c82cc2aeb6560140a81694f99051",
+							"host": [
+								"{{url}}paket"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "5894c82cc2aeb6560140a81694f99051"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Paket Data",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "Nama",
+									"value": "Paket Basic",
+									"type": "default"
+								},
+								{
+									"key": "IDJenis",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "HargaPerJam",
+									"value": "20000",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}paket/1?token=5894c82cc2aeb6560140a81694f99051",
+							"host": [
+								"{{url}}paket"
+							],
+							"path": [
+								"1"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "5894c82cc2aeb6560140a81694f99051"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Paket Data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Nama",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "IDJenis",
+									"value": "3",
+									"type": "default"
+								},
+								{
+									"key": "HargaPerJam",
+									"value": "1000",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}paket?token=5894c82cc2aeb6560140a81694f99051",
+							"host": [
+								"{{url}}paket"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "5894c82cc2aeb6560140a81694f99051"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Paket Data",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}paket/7?token=5894c82cc2aeb6560140a81694f99051",
+							"host": [
+								"{{url}}paket"
+							],
+							"path": [
+								"7"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "5894c82cc2aeb6560140a81694f99051"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Komputer Master Data",
+			"item": [
+				{
+					"name": "Get All Komputer Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}komputer?token=5894c82cc2aeb6560140a81694f99051",
+							"host": [
+								"{{url}}komputer"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "5894c82cc2aeb6560140a81694f99051"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Komputer Data",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "Nomor",
+									"value": "4",
+									"type": "default"
+								},
+								{
+									"key": "Merek",
+									"value": "Estima",
+									"type": "default"
+								},
+								{
+									"key": "IDJenis",
+									"value": "3",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}komputer/4?token=5894c82cc2aeb6560140a81694f99051",
+							"host": [
+								"{{url}}komputer"
+							],
+							"path": [
+								"4"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "5894c82cc2aeb6560140a81694f99051"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Komputer Data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Nomor",
+									"value": "16",
+									"type": "default"
+								},
+								{
+									"key": "Merek",
+									"value": "Acer Zepyrus",
+									"type": "default"
+								},
+								{
+									"key": "IDJenis",
+									"value": "3",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}komputer?token=5894c82cc2aeb6560140a81694f99051",
+							"host": [
+								"{{url}}komputer"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "5894c82cc2aeb6560140a81694f99051"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Paket Data",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}komputer/16?token=5894c82cc2aeb6560140a81694f99051",
+							"host": [
+								"{{url}}komputer"
+							],
+							"path": [
+								"16"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "5894c82cc2aeb6560140a81694f99051"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Diskon Master Data",
+			"item": [
+				{
+					"name": "Get All Diskon Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}diskon?token=5894c82cc2aeb6560140a81694f99051",
+							"host": [
+								"{{url}}diskon"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "5894c82cc2aeb6560140a81694f99051"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Diskon Data",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "Nama",
+									"value": "Promo Nataru",
+									"type": "default"
+								},
+								{
+									"key": "Kode",
+									"value": "NATARU2024",
+									"type": "default"
+								},
+								{
+									"key": "Presentase",
+									"value": "30",
+									"type": "default"
+								},
+								{
+									"key": "Maksimal",
+									"value": "100000",
+									"type": "default"
+								},
+								{
+									"key": "BerlakuSampai",
+									"value": "2024-12-25",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}diskon/2?token=5894c82cc2aeb6560140a81694f99051",
+							"host": [
+								"{{url}}diskon"
+							],
+							"path": [
+								"2"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "5894c82cc2aeb6560140a81694f99051"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Diskon Data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Nama",
+									"value": "Diskon Ramadhan",
+									"type": "default"
+								},
+								{
+									"key": "Kode",
+									"value": "RAMADHAN2025",
+									"type": "default"
+								},
+								{
+									"key": "Presentase",
+									"value": "20",
+									"type": "default"
+								},
+								{
+									"key": "Maksimal",
+									"value": "50000",
+									"type": "default"
+								},
+								{
+									"key": "BerlakuSampai",
+									"value": "2021-01-01",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}diskon?token=5894c82cc2aeb6560140a81694f99051",
+							"host": [
+								"{{url}}diskon"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "5894c82cc2aeb6560140a81694f99051"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Diskon Data",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}diskon/8?token=5894c82cc2aeb6560140a81694f99051",
+							"host": [
+								"{{url}}diskon"
+							],
+							"path": [
+								"8"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "5894c82cc2aeb6560140a81694f99051"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Member Master Data",
+			"item": [
+				{
+					"name": "Get All Member Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}member?token=5894c82cc2aeb6560140a81694f99051",
+							"host": [
+								"{{url}}member"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "5894c82cc2aeb6560140a81694f99051"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Member Data",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "Nama",
+									"value": "mcDJIL",
+									"type": "default"
+								},
+								{
+									"key": "Telepon",
+									"value": "082261984331",
+									"type": "default"
+								},
+								{
+									"key": "Alamat",
+									"value": "Jalan Locat Indah",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}member/1?token=5894c82cc2aeb6560140a81694f99051",
+							"host": [
+								"{{url}}member"
+							],
+							"path": [
+								"1"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "5894c82cc2aeb6560140a81694f99051"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Member Data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Nama",
+									"value": "Areal",
+									"type": "default"
+								},
+								{
+									"key": "Telepon",
+									"value": "082261984331",
+									"type": "default"
+								},
+								{
+									"key": "Alamat",
+									"value": "Jalan suka duka",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}member?token=5894c82cc2aeb6560140a81694f99051",
+							"host": [
+								"{{url}}member"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "5894c82cc2aeb6560140a81694f99051"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Member Data",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transaksi Master Data",
+			"item": [
+				{
+					"name": "Get All Transaksi Data",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
